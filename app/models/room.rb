@@ -1,10 +1,21 @@
 class Room < ActiveRecord::Base
-   
+   belongs_to :house
 end
 
-# Room.create(key: value)
-# Room.create(name: 'bedroom1', theme: 'Disney Jr', use: true)
-# Room.create(name: 'bathroom1', theme: 'Beach', use: true)
-# Room.create(name: 'bathroom2', theme: 'Mermaids', use: true)
-# Room.create(name: 'bathroom3', theme: 'Easter', use: false)
-# Room.create(name: 'kitchen', theme: 'A famous Cheif', use: true)
+# build assocs
+# h = House.find(2)
+# cheif_rm = Room.find_by(name: 'kitchen')
+
+# MUST use SAVE after these
+# 1) set the house_id attr
+# cheif_rm.house_id = h.id
+# cheif_rm.house_id.save
+
+# 2) use the #house=, set 2 an obj
+# bd1.house = h
+# bd1.save
+
+# BUILD on BELONGs_to
+# obj.assoc.BUILD(arg-attrs-of-the-obj-your-building)
+# rm.build_house(location: 'suburb', size: 'small')
+# rm.save

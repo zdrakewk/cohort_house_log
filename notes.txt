@@ -1,0 +1,14 @@
+* has_many / belong_to
+House 
+  ~ has_many rooms
+  ~ belongs_to a person
+Room 
+ ~ belongs_to a house
+
+
+* has_many through
+many-to-many
+
+Person 
+  ~ has_many house
+  ~ has_many rooms THROUGH a house  
