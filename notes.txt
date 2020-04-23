@@ -12,3 +12,6 @@ many-to-many
 Person 
   ~ has_many house
   ~ has_many rooms THROUGH a house  
+
+
+AR Association: https://guides.rubyonrails.org/association_basics.html
