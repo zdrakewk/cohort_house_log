@@ -1,5 +1,6 @@
 class House < ActiveRecord::Base
   has_many :rooms
+  belongs_to :person
 end
 
 # use #rooms add room_obj to arr
