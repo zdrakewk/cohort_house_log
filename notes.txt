@@ -1,0 +1,6 @@
+VERBS  ~> C.R.U.D. connections
+_______________________________
+GET       ~> Read, READ from a table
+POST      ~> Create, ADD to a table
+PUT/PATCH ~> Update, UPDATING info IN the table
+DELETE    ~> Delete, DELETE info IN the tablexen

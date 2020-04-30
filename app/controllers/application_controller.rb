@@ -7,6 +7,8 @@ class ApplicationController < Sinatra::Base
     set :views, 'app/views'
   end
 
+  # routes consist of
+  # HTTP Verb - URL - Block
   get "/" do
     erb :welcome
   end
