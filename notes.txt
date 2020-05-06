@@ -1,6 +1,22 @@
+Method    Action	          Description
+GET	      /newsletters	    Show all newsletters
+GET	      /newsletters/:id	Show a single newsletter
+--
+GET	      /newsletters/new	
+  Description ~ Render the form for creating a new newsletter
+POST	    /newsletters	    Create a new newsletter obj
+--
+GET	      /newsletters/:id/edit	
+  Description ~ Render the form for editing a newsletter
+PATCH	    /newsletters/:id	Update a newsletter
+--
+DELETE	/newsletters/:id	Delete a newsletter
+
+
+
 VERBS  ~> C.R.U.D. connections
 _______________________________
 GET       ~> Read, READ from a table
 POST      ~> Create, ADD to a table
 PUT/PATCH ~> Update, UPDATING info IN the table
-DELETE    ~> Delete, DELETE info IN the tablexen
+DELETE    ~> Delete, DELETE info IN the table

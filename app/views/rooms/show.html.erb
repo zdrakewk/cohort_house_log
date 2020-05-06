@@ -1,1 +1,11 @@
-<h1>This is the show page for an individual instance of your model.</h1>
+<h1>This is the show page for <%= @room_obj.theme %> room theme.</h1>
+
+<%#= @room_obj.attributes %>
+<%# {"id"=>3, "name"=>"bathroom2", "theme"=>"Mermaids", "use"=>true}
+%>
+
+<p>The <%= @room_obj.name %> is currently <%= @room_obj.use ? "in use" : "not in use Enjoy" %>! </p>
+
+<%# if @room_obj.use %>
+<%# else %>
+<%# end %>
