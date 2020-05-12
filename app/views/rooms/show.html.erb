@@ -9,3 +9,10 @@
 <%# if @room_obj.use %>
 <%# else %>
 <%# end %>
+
+<form action='/rooms/<%= @room_obj.id %>' method='post'>
+  <input type='hidden' name='_method' value='delete'/>
+  <label>Are you sure?!?!<label><br>
+  <input type='submit' value='Delete'><br>
+  <label>Sit here and think about your decisions  <label>
+<form>

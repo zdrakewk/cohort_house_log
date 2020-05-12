@@ -9,7 +9,7 @@ class ApplicationController < Sinatra::Base
 
   # routes consist of
   # HTTP Verb - URL - Block
-  get "/" do
+  get "/" do #root_route
     erb :welcome
   end
 

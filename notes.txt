@@ -1,3 +1,9 @@
+FIND PID & KILL
+lsof -i tcp:PORT ~> lsof -i tcp:9393 
+Kill -9 PID from list
+
+
+
 Method    Action	          Description
 GET	      /newsletters	    Show all newsletters
 GET	      /newsletters/:id	Show a single newsletter
