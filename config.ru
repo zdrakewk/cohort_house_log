@@ -8,3 +8,5 @@ use Rack::MethodOverride
 
 run ApplicationController
 use RoomsController
+use UsersController
+use SessionsController
