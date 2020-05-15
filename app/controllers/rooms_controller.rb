@@ -2,8 +2,10 @@ class RoomsController < ApplicationController
   # routes consist of
   # HTTP Verb - URL - Block
   get '/rooms' do # index route
-    binding.pry
-    # get a list of rooms from the table
+    # binding.pry
+    redirect '/' if !(is_logged_in?)
+      
+    # a list of rooms from the table
     @all_rooms = Room.all # <~ connect 2 table via MODEL
     # binding.pry
     erb :'rooms/index' # render the index view
@@ -24,12 +26,17 @@ class RoomsController < ApplicationController
   end
 
   get '/rooms/:id' do # SHOW route
+    redirect '/' if !(is_logged_in?)
+
     # display ONE room obj
     # binding.pry
     @room_obj = Room.find_by(id: params[:id])
     # @room_obj = Room.find( params[:id])
-
-    erb :'rooms/show.html'
+    if @room_obj
+      erb :'rooms/show.html'
+    else
+      redirect '/rooms'
+    end
   end
 
   get '/rooms/:id/edit' do # EDIT route
